@@ -11,9 +11,10 @@ const BottomHeader = () => {
       direction={"row"}
       justifyContent={"space-between"}
       alignItems={"center"}
-      p={3}
+      py={2}
+      px={4}
       sx={{
-        border: "1px solid #ccc",
+        border: "1px solid #ececec",
       }}
     >
       <Stack direction={"row"} spacing={2}>

@@ -1,0 +1,17 @@
+@use "../helpers/" as *;
+
+.trademark {
+  & .trademarkImage {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 5px solid hsl(37, 93%, 89%);
+  }
+  & .tradeSection {
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+  }
+}

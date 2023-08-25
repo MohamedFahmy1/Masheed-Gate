@@ -1,0 +1,13 @@
+@use "../helpers/" as *;
+
+.landing {
+  & img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 6px;
+  }
+  & button:disabled {
+    cursor: not-allowed;
+  }
+}

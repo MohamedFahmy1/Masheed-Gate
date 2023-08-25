@@ -18,7 +18,7 @@ const TopHeader = () => {
   return (
     <Stack
       direction={"row"}
-      p={2}
+      p={3}
       alignItems={"center"}
       justifyContent={"space-between"}
     >
