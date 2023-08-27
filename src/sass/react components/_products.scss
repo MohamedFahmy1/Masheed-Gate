@@ -1,0 +1,11 @@
+@use "../helpers/" as *;
+
+.products {
+  & .buttonArrow {
+    cursor: not-allowed;
+    color: #ccc;
+  }
+  & button:disabled {
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,11 @@
+@use "../helpers/" as *;
+
+.rest {
+  & .frameImages {
+    & img {
+      width: 100%;
+      vertical-align: middle;
+      height: auto;
+    }
+  }
+}

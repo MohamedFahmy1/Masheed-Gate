@@ -1,13 +1,37 @@
 @use "../helpers/" as *;
 
-.landing {
-  & img {
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
-    border-radius: 6px;
+main {
+  & .landing {
+    & img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+      border-radius: 6px;
+    }
+    & button:disabled {
+      cursor: not-allowed;
+    }
   }
-  & button:disabled {
-    cursor: not-allowed;
+  & .girdImages {
+    & img {
+      width: 100%;
+      vertical-align: middle;
+      max-height: 200px;
+    }
+  }
+  & span.price {
+    position: relative;
+    font-size: 18px;
+    font-weight: 800;
+    color: $main-color;
+    &::before {
+      content: "ر.س";
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25px;
+      font-size: 13px;
+    }
   }
 }
