@@ -2,13 +2,13 @@ import Image from "next/image";
 import React from "react";
 import logo from "@/images/logo.svg";
 import {
-  Box,
   Button,
   Stack,
   MenuItem,
   TextField,
   InputAdornment,
   Typography,
+  Grid,
 } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import TranslateIcon from "@mui/icons-material/Translate";
@@ -16,20 +16,26 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
 const TopHeader = () => {
   return (
-    <Stack
+    <Grid
+      container
       direction={"row"}
-      p={3}
       alignItems={"center"}
-      justifyContent={"space-between"}
+      justifyContent={{ xs: "center", sm: "space-between" }}
+      rowGap={1}
+      p={1}
     >
-      <Box>
-        <Stack direction={"row"} spacing={2} alignItems={"center"}>
+      <Grid item order={1}>
+        <Stack direction={"row"} alignItems={"center"}>
           <Button
             sx={{
               backgroundColor: "#047857",
               color: "white",
               fontFamily: "Tajawal",
               fontWeight: "400",
+              fontSize: {
+                xs: "12px",
+                sm: "16px",
+              },
               "&:hover": {
                 backgroundColor: "#198563",
               },
@@ -40,7 +46,11 @@ const TopHeader = () => {
             بيع علي مشيد
           </Button>
           <Button variant="text" color="success">
-            <Stack direction={"row"} spacing={1}>
+            <Stack
+              direction={"row"}
+              spacing={1}
+              width={{ xs: "103px", sm: "100%" }}
+            >
               <LocationOnIcon sx={{ color: "#047857" }} />
               <Typography variant="body1">اختر المدينة</Typography>
               <ArrowDropDownIcon sx={{ color: "#047857" }} />
@@ -50,7 +60,10 @@ const TopHeader = () => {
             select
             placeholder="العربية"
             sx={{
-              width: "120px",
+              width: {
+                xs: "70px",
+                sm: "120px",
+              },
               backgroundColor: "white",
               fontFamily: "Tajawal",
             }}
@@ -68,8 +81,8 @@ const TopHeader = () => {
             <MenuItem value="en">English</MenuItem>
           </TextField>
         </Stack>
-      </Box>
-      <div className="searchComp">
+      </Grid>
+      <Grid item className="searchComp" order={{ xs: 3, sm: 2 }}>
         <SearchIcon className="icon" />
         <input
           type="text"
@@ -93,11 +106,11 @@ const TopHeader = () => {
           <option value={"12"}>ملحقات الأرضية</option>
           <option value={"13"}>أدوات اعمال اللياسة</option>
         </select>
-      </div>
-      <Box>
+      </Grid>
+      <Grid item order={2}>
         <Image src={logo} alt="logo" width={190} height={52} />
-      </Box>
-    </Stack>
+      </Grid>
+    </Grid>
   );
 };
 
