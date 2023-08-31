@@ -14,6 +14,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import TranslateIcon from "@mui/icons-material/Translate";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
+import MenuIcon from "@mui/icons-material/Menu";
 const TopHeader = () => {
   return (
     <Grid
@@ -33,7 +34,6 @@ const TopHeader = () => {
               fontFamily: "Tajawal",
               fontWeight: "400",
               fontSize: {
-                xs: "12px",
                 sm: "16px",
               },
               "&:hover": {

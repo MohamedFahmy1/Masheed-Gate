@@ -394,6 +394,11 @@ header .searchComp .search {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
+@media (max-width: 767px) {
+  header .searchComp .search {
+    width: 200px;
+  }
+}
 header .searchComp .search::placeholder {
   color: #ccc;
 }
@@ -411,6 +416,20 @@ header .searchComp .selectItems {
 header .searchComp .selectItems option {
   background-color: white;
   color: black;
+}
+@media (max-width: 767px) {
+  header .links {
+    flex-direction: column-reverse;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-top: 20px;
+    background-color: #fff;
+  }
 }
 header .links a {
   color: rgba(68, 68, 68, 0.8784313725);

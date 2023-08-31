@@ -5,6 +5,8 @@ import cart from "@/images/cart.svg";
 import megaMenu from "@/images/megaMenu.svg";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import CloseIcon from "@mui/icons-material/Close";
+import logo from "@/images/logo.svg";
 const BottomHeader = () => {
   return (
     <Stack
@@ -80,6 +82,20 @@ const BottomHeader = () => {
             </Typography>
           </Stack>
         </Link>
+        <Stack
+          direction={"row-reverse"}
+          justifyContent={"space-between"}
+          className="logo"
+          width={"100%"}
+          mb={2}
+          p={2}
+          borderBottom={"1px solid #ccc"}
+        >
+          <Image src={logo} alt="logo" width={150} />
+          <IconButton>
+            <CloseIcon />
+          </IconButton>
+        </Stack>
       </Stack>
     </Stack>
   );
