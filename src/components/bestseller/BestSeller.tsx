@@ -63,11 +63,11 @@ const responsive = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 4,
+    items: 2,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 4,
+    items: 1,
   },
 };
 const BestSeller = () => {
@@ -87,12 +87,19 @@ const BestSeller = () => {
       <Grid
         container
         direction={"row-reverse"}
-        alignItems={"flex-start"}
         spacing={6}
         lg={12}
+        justifyContent={"center"}
+        alignItems={"center"}
       >
-        <Grid item lg={2} mr={10}>
-          <Stack direction={"column"} spacing={6}>
+        <Grid item lg={2} mr={{ xs: 0, lg: 5 }} xs={12}>
+          <Stack
+            direction={{ xs: "row", lg: "column" }}
+            spacing={6}
+            alignItems={"center"}
+            justifyContent={"center"}
+            className="bestSellerImages"
+          >
             <Grid item>
               <Image src={best1} alt="bestSeller" />
             </Grid>
@@ -104,9 +111,13 @@ const BestSeller = () => {
         <Grid
           item
           lg={9}
+          xs={11}
           sx={{
             paddingLeft: "0 !important",
           }}
+          justifyContent={"center"}
+          alignItems={"center"}
+          textAlign={"center"}
         >
           <Carousel
             responsive={responsive}

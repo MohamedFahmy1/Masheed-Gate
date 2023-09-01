@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
-import React, { Fragment } from "react";
+import React from "react";
 import ProductCard from "./ProductCard";
 import prod1_1 from "@/images/products/1-1.jpg";
 import prod1_2 from "@/images/products/1-2.jpg";
@@ -75,7 +75,7 @@ const Products = () => {
         </Typography>
         <Grid container p={2} spacing={3} direction={"row-reverse"}>
           {DUMMY_PRODUCTIONS.map((prod) => (
-            <Grid item lg={3} key={prod.title}>
+            <Grid item xs={12} sm={6} lg={3} key={prod.title}>
               <ProductCard title={prod.title} products={prod.products} />
             </Grid>
           ))}

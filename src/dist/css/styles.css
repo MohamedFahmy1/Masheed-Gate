@@ -417,18 +417,49 @@ header .searchComp .selectItems option {
   background-color: white;
   color: black;
 }
-@media (max-width: 767px) {
+header .megaMenu {
+  display: none;
+}
+@media (max-width: 991px) {
+  header .megaMenu {
+    display: block;
+    width: 25px;
+  }
+}
+header .logo {
+  display: none;
+}
+@media (max-width: 991px) {
+  header .logo {
+    display: flex;
+  }
+}
+@media (max-width: 991px) {
   header .links {
-    flex-direction: column-reverse;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding-top: 20px;
-    background-color: #fff;
+    display: none;
+  }
+}
+header .links.active {
+  display: flex;
+  flex-direction: column-reverse;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-top: 20px;
+  background-color: #fff;
+  z-index: 999999999999900;
+  animation: shift 0.7s ease;
+}
+@keyframes shift {
+  from {
+    right: -100vw;
+  }
+  to {
+    right: 0;
   }
 }
 header .links a {
@@ -481,6 +512,11 @@ main .landing img {
 main .landing button:disabled {
   cursor: not-allowed;
 }
+@media (max-width: 767px) {
+  main .sliderImages img {
+    max-width: 150px;
+  }
+}
 main .girdImages img {
   width: 100%;
   vertical-align: middle;
@@ -524,6 +560,13 @@ main span.price::before {
 
 .bestseller button:disabled {
   cursor: not-allowed;
+}
+@media (max-width: 767px) {
+  .bestseller .bestSellerImages img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
 }
 
 .rest .frameImages img {

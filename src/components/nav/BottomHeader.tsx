@@ -1,5 +1,12 @@
-import { Stack, Link, Button, IconButton, Typography } from "@mui/material";
-import React from "react";
+import {
+  Stack,
+  Link,
+  Button,
+  IconButton,
+  Typography,
+  Menu,
+} from "@mui/material";
+import React, { useState } from "react";
 import Image from "next/image";
 import cart from "@/images/cart.svg";
 import megaMenu from "@/images/megaMenu.svg";
@@ -7,7 +14,9 @@ import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import CloseIcon from "@mui/icons-material/Close";
 import logo from "@/images/logo.svg";
+import MenuIcon from "@mui/icons-material/Menu";
 const BottomHeader = () => {
+  const [menuActive, setMenuActive] = useState<boolean>(false);
   return (
     <Stack
       direction={"row"}
@@ -50,7 +59,18 @@ const BottomHeader = () => {
           <Image src={cart} alt="cart" />
         </IconButton>
       </Stack>
-      <Stack direction={"row"} component={"nav"} className="links">
+      <IconButton
+        className="megaMenu"
+        color="success"
+        onClick={() => setMenuActive(true)}
+      >
+        <MenuIcon fontSize="large" />
+      </IconButton>
+      <Stack
+        direction={"row"}
+        component={"nav"}
+        className={menuActive ? "links active" : "links"}
+      >
         <Link href="#" underline="none" color="initial" fontWeight={700} p={2}>
           الإضاءة
         </Link>
@@ -92,7 +112,7 @@ const BottomHeader = () => {
           borderBottom={"1px solid #ccc"}
         >
           <Image src={logo} alt="logo" width={150} />
-          <IconButton>
+          <IconButton onClick={() => setMenuActive(false)}>
             <CloseIcon />
           </IconButton>
         </Stack>

@@ -1,6 +1,6 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import React, { Fragment } from "react";
+import React from "react";
 import comp1 from "@/images/companies/1.jpg";
 import comp2 from "@/images/companies/11.jpg";
 import comp3 from "@/images/companies/10.jpg";
@@ -45,22 +45,54 @@ const RestOfPage = () => {
         direction={"row"}
         justifyContent={"center"}
         position={"relative"}
+        flexWrap={"wrap"}
+        rowGap={2}
       >
         <Image
           src={logo}
           alt="masheed logo"
-          style={{ position: "absolute", left: 0, top: -50, width: "250px" }}
+          style={{
+            position: "absolute",
+            left: 0,
+            top: -50,
+            width: "250px",
+            zIndex: -1,
+          }}
         />
-        <Box border={"2px solid green"} borderRadius={"4px"} px={8} py={1}>
+        <Box
+          border={"2px solid green"}
+          borderRadius={"4px"}
+          px={8}
+          py={1}
+          bgcolor={"white"}
+        >
           <Image src={comp1} alt="اسمنت العربية" />
         </Box>
-        <Box border={"2px solid green"} borderRadius={"4px"} px={8} py={1}>
+        <Box
+          border={"2px solid green"}
+          borderRadius={"4px"}
+          px={8}
+          py={1}
+          bgcolor={"white"}
+        >
           <Image src={comp2} alt="اسمنت الرياض" />
         </Box>
-        <Box border={"2px solid green"} borderRadius={"4px"} px={8} py={1}>
+        <Box
+          border={"2px solid green"}
+          borderRadius={"4px"}
+          px={8}
+          py={1}
+          bgcolor={"white"}
+        >
           <Image src={comp3} alt="اسمنت الشرقية" />
         </Box>
-        <Box border={"2px solid green"} borderRadius={"4px"} px={8} py={1}>
+        <Box
+          border={"2px solid green"}
+          borderRadius={"4px"}
+          px={8}
+          py={1}
+          bgcolor={"white"}
+        >
           <Image src={comp4} alt="اسمنت السعودية" />
         </Box>
       </Stack>

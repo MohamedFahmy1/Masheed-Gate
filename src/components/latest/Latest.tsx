@@ -36,11 +36,11 @@ const responsive = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 4,
+    items: 2,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 4,
+    items: 1,
   },
 };
 const Latest = () => {
@@ -65,8 +65,11 @@ const Latest = () => {
         lg={12}
         sx={{ margin: "0 !important" }}
       >
-        <Grid item lg={2} ml={2}>
-          <Stack direction={"column"} spacing={6}>
+        <Grid item lg={2} xs={12} ml={2} className="bestSellerImages">
+          <Stack
+            direction={{ lg: "column", xs: "row" }}
+            spacing={{ lg: 6, xs: 3 }}
+          >
             <Grid item>
               <Image src={latest1} alt="latest product" />
             </Grid>
@@ -78,6 +81,7 @@ const Latest = () => {
         <Grid
           item
           lg={9}
+          xs={12}
           sx={{
             paddingRight: "0 !important",
           }}

@@ -30,11 +30,11 @@ const responsive = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 15,
+    items: 8,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 15,
+    items: 4,
   },
 };
 const trademarks: StaticImageData[] = [
@@ -75,6 +75,7 @@ const Trademarks = () => {
           renderArrowsWhenDisabled={true}
           infinite={true}
           autoPlay={true}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
         >
           {trademarks.map((item) => (
             <Box key={Date.now()}>
@@ -89,13 +90,13 @@ const Trademarks = () => {
         </Carousel>
       </Box>
       <Grid container spacing={3} px={2} className="tradeSection" pb={10}>
-        <Grid item lg={8}>
+        <Grid item lg={8} xs={12}>
           <Image src={tr1} alt="بورسالين" />
         </Grid>
-        <Grid item lg={2}>
+        <Grid item lg={2} xs={6}>
           <Image src={tr2} alt="اسمنت" />
         </Grid>
-        <Grid item lg={2}>
+        <Grid item lg={2} xs={6}>
           <Image src={tr3} alt="اسمنت" />
         </Grid>
       </Grid>
