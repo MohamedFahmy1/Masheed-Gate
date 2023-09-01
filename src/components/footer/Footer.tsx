@@ -133,7 +133,7 @@ const Footer = () => {
               spacing={2}
               gap={2}
             >
-              <Box>
+              <Box width={"60%"}>
                 <Typography
                   variant="h5"
                   color="white"
