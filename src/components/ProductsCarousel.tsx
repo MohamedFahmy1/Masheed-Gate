@@ -1,9 +1,15 @@
+"use client";
 import React from "react";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { Button, Card, Typography } from "@mui/material";
-import Image from "next/image";
-import { productsData } from "@/utils/types";
-
+import Image, { StaticImageData } from "next/image";
+interface productsData {
+  name: string;
+  img: StaticImageData;
+  price: number;
+  availability?: boolean;
+}
+[];
 const ProductsCarousel: React.FC<productsData> = ({
   name,
   img,

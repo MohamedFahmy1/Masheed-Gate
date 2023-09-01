@@ -10,7 +10,15 @@ import {
 import React from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import { categories } from "@/utils/types";
+export interface categories {
+  title: string;
+  products: {
+    name: string;
+    imageSrc: string;
+  }[];
+}
+[];
+
 const ProductCard: React.FC<categories> = ({ title, products }) => {
   return (
     <Box border={"1px solid #333"} borderRadius={"6px"} p={2}>

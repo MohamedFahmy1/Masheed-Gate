@@ -7,11 +7,11 @@ export interface productsData {
   availability?: boolean;
 }
 [];
-export interface categories {
-  title: string;
-  products: {
-    name: string;
-    imageSrc: string;
-  }[];
-}
-[];
+// export interface categories {
+//   title: string;
+//   products: {
+//     name: string;
+//     imageSrc: string;
+//   }[];
+// }
+// [];

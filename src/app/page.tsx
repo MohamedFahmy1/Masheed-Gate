@@ -1,3 +1,4 @@
+"use client";
 import BestSeller from "@/components/bestseller/BestSeller";
 import Footer from "@/components/footer/Footer";
 import Landing from "@/components/landing/Landing";

@@ -11,10 +11,8 @@ import slider3 from "@/images/slider3.png";
 import slider4 from "@/images/slider4.png";
 import slider5 from "@/images/slider5.png";
 import dynamic from "next/dynamic";
-const Carousel = dynamic(() => import("react-multi-carousel"), {
-  ssr: false,
-  suspense: true,
-});
+import Carousel from "react-multi-carousel";
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.

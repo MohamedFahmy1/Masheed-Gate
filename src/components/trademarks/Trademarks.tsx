@@ -70,7 +70,6 @@ const Trademarks = () => {
           responsive={responsive}
           swipeable={true}
           draggable={true}
-          ssr={false}
           rtl={true}
           renderArrowsWhenDisabled={true}
           infinite={true}

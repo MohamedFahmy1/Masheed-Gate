@@ -88,7 +88,6 @@ const BestSeller = () => {
         container
         direction={"row-reverse"}
         spacing={6}
-        lg={12}
         justifyContent={"center"}
         alignItems={"center"}
       >
@@ -123,7 +122,6 @@ const BestSeller = () => {
             responsive={responsive}
             swipeable={true}
             draggable={true}
-            ssr={true}
             rtl={true}
             renderArrowsWhenDisabled={true}
           >

@@ -62,7 +62,6 @@ const Latest = () => {
         direction={"row"}
         justifyContent={"space-between"}
         spacing={2}
-        lg={12}
         sx={{ margin: "0 !important" }}
       >
         <Grid item lg={2} xs={12} ml={2} className="bestSellerImages">
@@ -90,7 +89,6 @@ const Latest = () => {
             responsive={responsive}
             swipeable={true}
             draggable={true}
-            ssr={true}
             rtl={true}
             renderArrowsWhenDisabled={true}
           >

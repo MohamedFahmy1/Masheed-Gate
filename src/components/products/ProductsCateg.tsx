@@ -75,7 +75,6 @@ const ProductsCateg = () => {
         responsive={responsive}
         swipeable={true}
         draggable={true}
-        ssr={true}
         rtl={true}
         renderArrowsWhenDisabled={true}
       >
